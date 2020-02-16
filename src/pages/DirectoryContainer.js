@@ -1,12 +1,44 @@
-import React from 'react';
-import Header from "../components/Header"
-import InfoTable from "../components/InfoTable"
+// npm imports
+import React, { useState, useEffect } from 'react';
+// bootstrap imports
+import Header from "../components/Header";
+// local imports
+import InfoTable from "../components/InfoTable";
+import { EmployeeContext } from "../utils/EmployeeContext";
+import {GetEmployees} from "../utils/API";
+
 export default function DirectoryContainer() {
+
+
+    const [employees, setEmployees] = useState([]);
+
+    useEffect(() => {
+        LoadEmployees();
+    }, [])
+
+    const LoadEmployees = () => {
+        GetEmployees()
+        .then((response) => {
+            setEmployees(response.results)
+        })
+        .catch((err) => {
+            console.error(err);
+        })
+    }
+
     return (
-        <div>
+
+
+        <EmployeeContext.Provider
+
+        value = {
+            {
+                employees: employees
+            }
+        }>
             <Header />
             <InfoTable />
-        </div>
+        </EmployeeContext.Provider>
 
     );
 }
