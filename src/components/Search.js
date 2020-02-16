@@ -1,14 +1,16 @@
+// npm imports
 import React from "react";
-import Bootstrap from "bootstrap";
+// Bootstrap imports
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 
-export default class Search extends React.Component {
+export default function Search() {
 
-    render() {
-        return(
-            <div>
-
-
-            </div>
-        )
-    }
+    return (
+        <Form inline>
+            <FormControl type="text" placeholder="John Doe" className=" mr-sm-2" />
+            <Button type="submit">Search</Button>
+        </Form>
+    )
 }

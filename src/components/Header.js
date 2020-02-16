@@ -1,17 +1,25 @@
+// npm imports
 import React from "react";
-import {Jumbotron, Container} from "react-bootstrap"
+// Bootstrap Import
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Container from 'react-bootstrap/Container'; 
+// Local Imports
+import Search from '../components/Search'
+
+
+
 export default function Header() {
 
-    return (
-        <Jumbotron fluid>
-        <Container>
-          <h1>Fluid jumbotron</h1>
-          <p>
-            This is a modified jumbotron that occupies the entire horizontal space of
-            its parent.
+  return (
+    <Jumbotron fluid>
+      <Container>
+        <h1>Employee Directory</h1>
+        <p>
+          Asset managment made simple.
           </p>
-        </Container>
-      </Jumbotron>
-    )
+          <Search />
+      </Container>
+    </Jumbotron>
+  )
 
 }
