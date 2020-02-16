@@ -1,11 +1,11 @@
 import React from 'react';
-import DirectoryContainer from "./components/DirectoryContainer"
+import DirectoryContainer from "./pages/DirectoryContainer"
 
 
 function App() {
   return (
     <div>
-     <DirectoryContainer/>
+    Hello World
     </div>
   );
 }
