@@ -2,12 +2,8 @@ import React from 'react';
 import DirectoryContainer from "./pages/DirectoryContainer"
 
 
-function App() {
+export default function App() {
   return (
-    <div>
-    Hello World
-    </div>
+    <DirectoryContainer />
   );
 }
-
-export default App;

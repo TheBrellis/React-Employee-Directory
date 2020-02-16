@@ -1,14 +1,13 @@
 import React from "react";
-import Bootstrap from "bootstrap";
+
+export default function Header() {
+
+    return (
+        <div>
+            Hello World2
+        </div>
+    )
 
 
-export default class Header extends React.Component {
 
-    render() {
-        return (
-            <div>
-
-            </div>
-        )
-    }
 }
