@@ -9,35 +9,35 @@ import {GetEmployees} from "../utils/API";
 
 export default function DirectoryContainer() {
 
-
     const [employees, setEmployees] = useState([]);
 
     useEffect(() => {
         LoadEmployees();
-    }, [])
+    },[])
 
     const LoadEmployees = () => {
         GetEmployees()
         .then((response) => {
-            setEmployees(response.results)
+            console.log(response.data.results);
+            setEmployees(response.data.results)
+            console.log(employees);
         })
         .catch((err) => {
             console.error(err);
         })
     }
-
     return (
 
 
         <EmployeeContext.Provider
-
         value = {
             {
                 employees: employees
             }
-        }>
+        }
+        >
             <Header />
-            <InfoTable />
+            <InfoTable/>
         </EmployeeContext.Provider>
 
     );
