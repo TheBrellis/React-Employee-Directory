@@ -18,26 +18,20 @@ export default function DirectoryContainer() {
     const LoadEmployees = () => {
         GetEmployees()
         .then((response) => {
-            console.log(response.data.results);
-            setEmployees(response.data.results)
-            console.log(employees);
+            console.log(response.data.results)
+            setEmployees(response.data.results);
         })
         .catch((err) => {
             console.error(err);
         })
     }
     return (
-
-
         <EmployeeContext.Provider
-        value = {
-            {
-                employees: employees
-            }
-        }
         >
             <Header />
-            <InfoTable/>
+            <InfoTable
+            employees= {employees}
+            />
         </EmployeeContext.Provider>
 
     );

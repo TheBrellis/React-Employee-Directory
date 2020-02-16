@@ -12,12 +12,12 @@ export default function TableData(props) {
         <tbody>
             <tr>
                 <td>
-                    <img alt={props.employee.name} src={props.image} />
+                    <img alt={ props.employee.name.first+" "+ props.employee.name.last } src={ props.employee.picture.thumbnail} />
                 </td>
-                <td>{props.employee.name}</td>
-                <td>{props.employee.phone}</td>
-                <td>{props.employee.email}</td>
-                <td>{props.employee.dob}</td>
+                <td>{ props.employee.name.first+" "+props.employee.name.last} </td>
+                <td>{ props.employee.phone }</td>
+                <td>{ props.employee.email }</td>
+                <td>{ new Moment(props.employee.dob.date).format("MM/DD/YYYY") }</td>
             </tr>
         </tbody>
     )

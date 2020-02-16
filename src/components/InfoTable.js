@@ -16,12 +16,11 @@ export default function InfoTable (props) {
                 <th>DOB</th>
             </thead>
         {
-            console.log(props)
-            // props.employees.map((employee) => (
-            //     <TableData
-            //     employee = {employee}
-            //     />
-            // ))
+            props.employees.map((employee) => (
+                <TableData
+                employee = {employee}
+                />
+            ))
         }
         </Table>
     )
