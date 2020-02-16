@@ -1,8 +1,9 @@
 // npm imports
 import React from "react";
-// Bootstrap Import
+// Bootstrap imports
 import Table from 'react-bootstrap/Table';
-
+// Local imports
+import TableData from "./TableData";
 
 export default function InfoTable () {
 
@@ -15,6 +16,7 @@ export default function InfoTable () {
                 <th>Email</th>
                 <th>DOB</th>
             </thead>
+            <TableData />
         </Table>
     )
 }
